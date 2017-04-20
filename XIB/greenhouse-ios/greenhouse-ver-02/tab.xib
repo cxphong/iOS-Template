@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TabView" customModule="greenhouse_ver_02" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-Lm-7AI">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="667"/>
+                    <color key="backgroundColor" red="0.24313725490196078" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Dashboard">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t3-SR-hzi">
+                    <rect key="frame" x="125" y="0.0" width="125" height="667"/>
+                    <color key="backgroundColor" red="0.24313725490196078" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Reports">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW2-RI-xFx">
+                    <rect key="frame" x="250" y="0.0" width="125" height="667"/>
+                    <color key="backgroundColor" red="0.24313725489999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="More">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9t3-SR-hzi" secondAttribute="bottom" id="3ZM-i1-On6"/>
+                <constraint firstItem="JW2-RI-xFx" firstAttribute="leading" secondItem="9t3-SR-hzi" secondAttribute="trailing" id="8R6-eb-dB2"/>
+                <constraint firstItem="rcp-Lm-7AI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HCP-Sq-I60"/>
+                <constraint firstItem="JW2-RI-xFx" firstAttribute="leading" secondItem="9t3-SR-hzi" secondAttribute="trailing" id="IRD-3a-ORN"/>
+                <constraint firstItem="9t3-SR-hzi" firstAttribute="leading" secondItem="rcp-Lm-7AI" secondAttribute="trailing" id="JHL-hd-xIE"/>
+                <constraint firstAttribute="bottom" secondItem="JW2-RI-xFx" secondAttribute="bottom" id="KRO-hh-5dn"/>
+                <constraint firstItem="9t3-SR-hzi" firstAttribute="leading" secondItem="rcp-Lm-7AI" secondAttribute="trailing" id="Zjn-wg-6s6"/>
+                <constraint firstAttribute="bottom" secondItem="rcp-Lm-7AI" secondAttribute="bottom" id="bWm-41-3nq"/>
+                <constraint firstItem="rcp-Lm-7AI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bdH-Fm-CeJ"/>
+                <constraint firstItem="rcp-Lm-7AI" firstAttribute="width" secondItem="9t3-SR-hzi" secondAttribute="width" id="gv2-9X-e3c"/>
+                <constraint firstAttribute="trailing" secondItem="JW2-RI-xFx" secondAttribute="trailing" id="hWA-mX-Ouq"/>
+                <constraint firstItem="9t3-SR-hzi" firstAttribute="width" secondItem="JW2-RI-xFx" secondAttribute="width" id="mrX-AI-5Vi"/>
+                <constraint firstItem="JW2-RI-xFx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pzV-td-qf8"/>
+                <constraint firstItem="9t3-SR-hzi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sMO-Te-zEM"/>
+            </constraints>
+            <connections>
+                <outlet property="dashboard" destination="rcp-Lm-7AI" id="dTf-CB-eW5"/>
+                <outlet property="more" destination="JW2-RI-xFx" id="o7I-Q8-cmD"/>
+                <outlet property="reports" destination="9t3-SR-hzi" id="VYs-fd-d6W"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
