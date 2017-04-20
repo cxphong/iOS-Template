@@ -28,34 +28,34 @@ class ViewController: UIViewController {
         
         self.createTabBorder()
         
-        self.tabview.getDashboard().addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
-        self.tabview.getReports().addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
-        self.tabview.getMore().addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
+        self.tabview.dashboard.addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
+        self.tabview.reports.addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
+        self.tabview.more.addTarget(self, action: #selector(self.clickTab(_:)), for: UIControlEvents.touchUpInside)
         self.updateTabHilight()
     }
     
     private func updateTabHilight() {
         if (self.tabIndex == 0) {
-            self.tabview.getDashboard().setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
-            self.tabview.getReports().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
-            self.tabview.getMore().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.dashboard.setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
+            self.tabview.reports.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.more.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
         } else if (self.tabIndex == 1) {
-            self.tabview.getReports().setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
-            self.tabview.getDashboard().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
-            self.tabview.getMore().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.reports.setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
+            self.tabview.dashboard.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.more.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
         } else if (self.tabIndex == 2) {
-            self.tabview.getMore().setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
-            self.tabview.getReports().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
-            self.tabview.getDashboard().setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.more.setTitleColor(UIColor(hexString:"#14718b"), for: UIControlState.normal)
+            self.tabview.reports.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
+            self.tabview.dashboard.setTitleColor(UIColor(hexString:"#ffffff"), for: UIControlState.normal)
         }
     }
     
     @objc private func clickTab(_ sender: UIButton) {
-        if (sender == self.tabview.getDashboard()) {
+        if (sender == self.tabview.dashboard) {
             self.tabIndex = 0
-        } else if (sender == self.tabview.getReports()) {
+        } else if (sender == self.tabview.reports) {
             self.tabIndex = 1
-        } else if (sender == self.tabview.getMore()) {
+        } else if (sender == self.tabview.more) {
             self.tabIndex = 2
         }
         
@@ -63,18 +63,18 @@ class ViewController: UIViewController {
     }
     
     private func createTabBorder() {
-        self.addBorder(view: self.tabview.getDashboard(), edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getDashboard(), edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getDashboard(), edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.dashboard, edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.dashboard, edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.dashboard, edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
         
-        self.addBorder(view: self.tabview.getReports(), edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getReports(), edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getReports(), edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.reports, edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.reports, edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.reports, edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
         
-        self.addBorder(view: self.tabview.getMore(), edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getMore(), edge: UIRectEdge.right, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getMore(), edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
-        self.addBorder(view: self.tabview.getMore(), edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.more, edge: UIRectEdge.left, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.more, edge: UIRectEdge.right, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.more, edge: UIRectEdge.top, thickness: 2.0, color: UIColor.white)
+        self.addBorder(view: self.tabview.more, edge: UIRectEdge.bottom, thickness: -2.0, color: UIColor.white)
     }
     
     private func addBorder(view : UIView, edge : UIRectEdge, thickness : CGFloat, color : UIColor) {
